@@ -1,30 +1,36 @@
-# Sentiment and Thematic Trend Analysis of YouTube Watch History
+# Analysis of Temporal Changes in YouTube Viewing Habits in Different Periods
 
 ## Introduction  
-This project explores my YouTube watch history to uncover patterns and trends in the content I consume. By analyzing the sentiment of video metadata (e.g., titles, descriptions) and categorizing themes, the project aims to gain insights into how preferences vary over time and identify key trends in my viewing habits.
+This project focuses on analyzing changes in my YouTube viewing habits over time, with a specific emphasis on how different periods, such as exam times, influence these habits. By correlating my YouTube watch history with external schedules, such as exam dates sourced from my Notion calendar, I aim to uncover patterns in video consumption and how content preferences shift during stressful or busy periods.
 
 ## Motivation  
-Understanding personal content consumption habits is crucial for better time management, self-awareness, and exploring the underlying emotional and thematic patterns in daily routines. This analysis will not only provide a deeper understanding of how I interact with content but could also pave the way for developing personalized content recommendation systems or predicting user preferences. Additionally, it is an opportunity to demonstrate practical data science skills using real-world data.
+Understanding the impact of external factors, such as exams, on personal content consumption can provide deeper insights into time management, emotional states, and stress-coping mechanisms. This project combines real-world data sources to analyze not only what I watch but when and why I consume specific types of content during different periods. It aims to identify trends that can help in better self-awareness and potentially optimize content consumption patterns.
 
-## Data Source  
-The primary dataset is my YouTube watch history, obtained via [Google Takeout](https://takeout.google.com/). To enhance the dataset, video metadata such as categories, statistics (e.g., likes, views), and other relevant details will be fetched using the YouTube Data API v3.
+## Data Sources  
+1. **YouTube Watch History:**  
+   - Obtained via [Google Takeout](https://takeout.google.com/).  
+   - Includes metadata such as video titles, watch timestamps, and durations.  
+
+2. **Exam Dates:**  
+   - Extracted from a Notion calendar using the Notion API.  
+   - Provides structured data on exam schedules to correlate with viewing habits.
 
 ## Objectives  
-1. Conduct exploratory data analysis (EDA) to identify temporal viewing patterns (e.g., time of day, most active days).  
-2. Perform sentiment analysis on video titles and descriptions to understand the emotional tone of consumed content.  
-3. Categorize videos into themes (e.g., education, entertainment, news) to uncover thematic trends over time.  
-4. Visualize findings using interactive charts and dashboards to present insights effectively.
+1. Identify temporal viewing patterns, focusing on exam and non-exam periods.  
+2. Analyze sentiment of video titles and descriptions to determine emotional trends.  
+3. Categorize videos into themes (e.g., education, entertainment) and compare preferences between exam and non-exam periods.  
+4. Visualize changes in viewing habits and content preferences with interactive charts and dashboards.  
 
 ## Tools and Techniques  
 - **Programming:** Python (Google Colab)  
-- **Libraries:** `pandas`, `matplotlib`, `seaborn`, `nltk` (or `TextBlob`) for sentiment analysis, and `wordcloud` for text visualization  
-- **Data Source Integration:** Google Takeout for watch history and YouTube Data API for metadata  
+- **Libraries:** `pandas`, `matplotlib`, `seaborn`, `nltk` (or `TextBlob`), `notion-client`  
+- **Data Source Integration:** Google Takeout for YouTube data and Notion API for exam schedules  
 - **Version Control:** GitHub for project documentation and code sharing  
 
 ## Expected Outcomes  
-The project will deliver insights into my YouTube viewing habits, including the emotional tones and themes of the videos I watch. It will highlight my dominant content preferences, peak viewing times, and thematic trends over time. The final deliverables will include a set of interactive visualizations and a comprehensive report hosted on GitHub. This analysis can provide a baseline for understanding content consumption habits and pave the way for future studies or applications, such as personalized recommendations.
+The analysis will reveal how my YouTube viewing habits change during different periods, such as exam times, compared to regular times. It will identify shifts in video categories, viewing times, and emotional tones, providing a comprehensive picture of the impact of external factors on my content consumption. Visualizations and a detailed report hosted on GitHub will summarize these findings, offering insights into the interplay between stress, time management, and media preferences.
 
 ## Limitations and Future Work  
-- The analysis is limited to video metadata and does not include the actual video content.  
-- Future work could involve integrating video transcripts or employing advanced NLP techniques for deeper analysis.  
-- This project could be expanded to compare viewing habits with external factors, such as holidays or significant life events.
+- The analysis is limited to metadata and does not include video content or transcripts.  
+- Future work could include comparing these findings with larger datasets or incorporating physiological data (e.g., stress levels).  
+- Potential expansions could involve building a predictive model for viewing habits during upcoming stressful periods.
