@@ -73,7 +73,7 @@ The primary goal of this project is to uncover how my content preferences and vi
 
 ### **Version Control & Documentation:**
   - GitHub for code repository and version control.
-  - 
+
 ---
 
 ## **Key Findings**
