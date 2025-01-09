@@ -26,7 +26,7 @@ This project aims to uncover how my content preferences and viewing intensity ch
    - Includes metadata such as video titles, watch timestamps, and durations.  
 
 2. **Exam Dates:**  
-   - Extracted from a Notion calendar using the Notion API.  
+   - Extracted from a Notion calendar using the Notion Integrations(Integrations use the API to access Notion's pages, databases, and users. like google takeout).  
    - Provides structured data on exam schedules to correlate with viewing habits.
 
 ---
@@ -46,7 +46,6 @@ This project aims to uncover how my content preferences and viewing intensity ch
   - `pandas` for data processing  
   - `matplotlib` and `seaborn` for visualization  
   - `nltk` (or `TextBlob`) for sentiment analysis  
-  - `notion-client` for extracting data from the Notion API  
 - **Data Source Integration:** 
   - Google Takeout for YouTube watch history  
   - Notion API for exam schedules  
