@@ -26,7 +26,7 @@ The primary goal of this project is to uncover how my content preferences and vi
 - Includes metadata such as video titles, watch timestamps, and durations.
 
 ### **Exam Dates:**
-- Extracted from my Notion calendar using the Notion API.
+- Extracted from my Notion calendar using the Notion Integration (Integrations use the API to access Notion's pages, databases, and users. like google takeout).
 - Provides structured data on exam schedules to correlate with viewing habits.
 
 ---
@@ -41,17 +41,39 @@ The primary goal of this project is to uncover how my content preferences and vi
 ---
 
 ## **Tools and Techniques**
-- **Programming:** Python (Google Colab)
-- **Libraries:**
-  - `pandas` for data processing.
-  - `matplotlib` and `seaborn` for data visualization.
-  - `VADER` (or `TextBlob`) for sentiment analysis.
-  - `notion-client` for extracting data from the Notion API.
-- **Data Integration:**
+- **Programming Environment:** Python (Google Colab)
+
+### **Data Processing & Analysis Libraries:**
+  - `pandas` and `numpy` for data manipulation and numerical operations.
+  - `datetime` and `timedelta` for time series processing.
+  - `re` for regular expression operations.
+  - `tqdm` for progress tracking.
+  - `warnings` for warning management.
+
+### **Visualization Libraries:**
+  - `matplotlib` and `seaborn` for static visualizations.
+  - `plotly.express` and `plotly.graph_objects` for interactive plots.
+
+### **Text Processing & Sentiment Analysis:**
+  - `BeautifulSoup` for HTML parsing.
+  - `unidecode` for text normalization.
+  - `vaderSentiment` for sentiment analysis.
+
+### **Statistical Analysis:**
+  - `scipy.stats` for statistical testing (`ttest_ind`, `mannwhitneyu`).
+
+### **Machine Learning Libraries:**
+  - `sklearn.model_selection` for train-test splitting.
+  - `sklearn.ensemble` for Random Forest Classification.
+  - `sklearn.metrics` for model evaluation metrics.
+
+### **Data Sources & Integration:**
   - Google Takeout for YouTube watch history.
   - Notion API for exam schedules.
-- **Version Control:** GitHub for project documentation and code sharing.
 
+### **Version Control & Documentation:**
+  - GitHub for code repository and version control.
+  - 
 ---
 
 ## **Key Findings**
