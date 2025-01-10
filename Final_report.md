@@ -76,39 +76,81 @@ The primary goal of this project is to uncover how my content preferences and vi
 
 ---
 
-## **Key Findings**
-### **Viewing Intensity**
-- The hypothesis testing showed no significant difference in viewing intensity between exam and non-exam periods.
-- Daily watch patterns remained consistent, with slight variations in content types.
+## Key Findings and Analysis
 
-### **Content Preferences**
-- Educational videos accounted for a larger share of watched content during exam periods.
-- Entertainment videos were still watched frequently but showed minimal variation in their emotional tone.
+### 1. Viewing Intensity Analysis
+#### Temporal Patterns
+- Statistical analysis revealed intriguing patterns in viewing behavior:
+  * Exam periods: 43.68 ± 46.71 videos/day (Total: 4,979 videos over 114 days)
+  * Non-exam periods: 38.08 ± 33.92 videos/day (Total: 6,435 videos over 169 days)
+- Despite a higher average during exam periods, Mann-Whitney U Test (p-value = 0.868) indicated no statistically significant difference in viewing intensity
 
-### **Sentiment Analysis**
-- During exam periods, educational videos had predominantly neutral sentiments.
-- Entertainment videos had more polarized sentiments, with both positive and negative emotional tones.
+#### Time Distribution
+- Higher variability in viewing patterns during exam periods (SD: 46.71 vs 33.92)
+- Total viewing distribution:
+  * Exam periods accounted for 43.6% of total videos watched
+  * Non-exam periods accounted for 56.4% of total videos watched
 
----
+### 2. Content Type Analysis
+#### Distribution
+- Clear imbalance in content types:
+  * Entertainment: 10,658 videos (93.4%)
+  * Educational: 756 videos (6.6%)
 
-## **Model Performance**
-The Random Forest Classifier was used to predict content type based on features such as time of day, exam period, and sentiment score.
-- **Accuracy:** 93%
-- **Precision** (Educational Class): 21%
-- **Recall** (Educational Class): 4%
+### 3. Sentiment Analysis
+#### Overall Distribution
+- Three distinct sentiment categories emerged:
+  * Neutral: 8,140 videos (71.4%)
+  * Positive: 2,164 videos (19%)
+  * Negative: 1,110 videos (9.6%)
 
-### **Confusion Matrix Details:**
-- **True Negative (TN):** 2129 (correctly classified as "Entertainment")
-- **False Positive (FP):** 19 (incorrectly classified as "Educational")
-- **False Negative (FN):** 130 (incorrectly classified as "Entertainment")
-- **True Positive (TP):** 5 (correctly classified as "Educational")
+#### Period Comparison
+- Sentiment hypothesis testing showed no significant difference between periods
+  * t-test statistic: 0.434
+  * p-value: 0.665
+- Both periods maintained similar emotional content distribution
 
----
+### 4. Machine Learning Model Performance
+#### Classification Results
+- Overall accuracy: 93%
+- Detailed metrics:
+  * Entertainment content:
+    - Precision: 94%
+    - Recall: 99%
+    - F1-score: 97%
+  * Educational content:
+    - Precision: 21%
+    - Recall: 4%
+    - F1-score: 6%
 
-## **Limitations and Future Work**
-- **Class Imbalance:** The dataset had significantly more "Entertainment" videos than "Educational" videos, which impacted the model's ability to classify educational videos correctly. Future work should include balancing techniques such as oversampling or collecting additional educational content.
-- **Sentiment Analysis:** Only video titles were used for sentiment analysis. Expanding the analysis to include subtitles, comments, or descriptions could provide more robust insights.
-- **Time Period Expansion:** The analysis focused on exam periods. Including project submission dates and holiday breaks could provide additional insights into stress-related viewing patterns.
-- **Model Complexity:** A simple Random Forest Classifier was used. Exploring more complex models or performing hyperparameter tuning could improve classification accuracy.
+#### Confusion Matrix Analysis
+- True Negatives (Entertainment correctly classified): 2,129
+- False Positives (Incorrectly classified as Educational): 19
+- False Negatives (Incorrectly classified as Entertainment): 130
+- True Positives (Educational correctly classified): 5
 
----
+## Main Conclusions
+
+### 1. Viewing Pattern Analysis
+My initial hypothesis suggested that viewing habits would significantly differ during exam periods. However, the data analysis revealed that despite a slightly higher average during exam periods (43.68 vs 38.08 videos per day), this difference was not statistically significant (p-value = 0.868). Interestingly, we observed greater variability in viewing patterns during exam periods (SD: 46.71 vs 33.92), suggesting that students' watching habits become less predictable during these stressful times.
+
+### 2. Content Consumption Trends
+The analysis revealed a strong preference for entertainment content across all periods, with 10,658 entertainment videos compared to 756 educational videos. This pattern persisted regardless of whether it was an exam or non-exam period. While educational content made up a smaller portion of the total viewing (6.6%), it appeared to be more focused and specifically related to academic subjects, suggesting strategic use of educational content when needed.
+
+### 3. Model Performance and Implications
+My machine learning model demonstrated exceptional accuracy in identifying entertainment content (94% precision, 99% recall), but struggled significantly with educational content classification (21% precision, 4% recall). This stark difference in performance highlights not only the class imbalance in my dataset but also suggests that educational content might be more diverse and complex to classify than initially assumed. These findings indicate a need for more sophisticated approaches to educational content detection and classification in future analyses.
+
+## Limitations and Future Work
+
+1. **Data Imbalance**
+   - Significant disparity between entertainment and educational content
+   - Need for more sophisticated classification approaches
+
+2. **Analysis Scope**
+   - Current analysis limited to basic content categorization
+   - Potential for deeper analysis of video length and engagement metrics
+
+3. **Model Improvements**
+   - Consider implementing class balancing techniques
+   - Explore more complex feature engineering
+   - Investigate additional content categorization methods
